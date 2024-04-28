@@ -1,0 +1,35 @@
+body {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+.container {
+    padding-top: 100px;
+    margin-top: 100px;
+    text-align: center;  
+    width: 50%;
+    max-width: 600px;
+}
+
+h3 {
+    color: #006EB6;
+}
+
+h1, h3 {
+    text-transform: uppercase;
+}
+hr {
+    width: 80%
+}
+
+img {height: 100px;}
+
