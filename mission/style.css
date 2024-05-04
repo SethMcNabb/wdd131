@@ -20,16 +20,21 @@ body {
     max-width: 600px;
 }
 
-h3 {
-    color: #006EB6;
+h2 {
+    color: #A0D4ED;
 }
 
 h1, h3 {
     text-transform: uppercase;
 }
 hr {
-    width: 80%
+    width: 80%;
+}
+img {
+    height: 100px;
 }
 
-img {height: 100px;}
-
+.dark {
+    background-color: #333;
+    color: white;
+}
