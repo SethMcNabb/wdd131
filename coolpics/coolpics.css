@@ -1,42 +1,34 @@
 * {
     margin: 0;
-    padding: 0;   
-    text-align: center;   
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: #51489C;
-    color: white;
+    padding: 0;
+    text-align: center;
     font-size: 1.2rem;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=family=Mooli&display=swap");
-    :root {
+:root {
     --primary-color: #52489c;
     --secondary-color: #59c3c3;
     --accent-color: #f45b69;
     --text-dark: #333;
     --text-light: #ebebeb;
-    --primary-font: Arial, Helvetica,sans-serif;
-    --secondary-font: Mooli, san-serif;
-    }  
-
-body {
-    font-family: Arial, Helvetica,sans-serif;
-}
-
-h1, h2, h3{
-    font-family: 'Mooli', sans-serif;
-}
-
-h1 {
-    font-size: 36px;
+    --primary-font: Arial, Helvetica, sans-serif;
+    --secondary-font: Mooli, sans-serif;
 }
 
 body {
     font-family: var(--primary-font);
-    font-size: 1.2em;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+h1, h2, h3 {
+    font-family: var(--secondary-font);
+}
+
+h1 {
+    font-size: 36px;
 }
 
 a:link, a:visited {
@@ -47,37 +39,95 @@ main, section {
     background-color: #EBEBEB;
 }
 
+main {
+    margin: 0;
+}
+
 img {
-	max-width: 100%;
-    width: 250px; 
-    height: 250px; 
-    object-fit: cover; 
-    border: 8px solid white; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    max-width: 100%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border: 8px solid white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Style the button to look like regular text */
 button#button {
-    border: none; /* Remove border */
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
 }
 
-/* Style the navigation links to hide initially */
-.nav-links {
+.main-menu {
+    display: flex;
+    flex-direction: column; 
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: var(--primary-color);
+}
+
+.main-menu a {
+    text-decoration: none;
+    color: var(--text-light);
+    padding: 10px 20px;
+    display: block;
+}
+
+.main-menu a:hover {
+    background-color: #45a049;
+}
+/* Part II */
+.hide {
     display: none;
 }
+.viewer {
+    position: fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: grid;
+    place-items: center;
+    color: green;
+}
+.close-viewer {
+    grid-template-rows: 1;
+    max-height: 10%;
+    text-align: right;
+}
+.viewer img {
+    grid-template-rows: 2;
+    max-height: 100%;
+}
 
+
+
+/* Media Queries */
 @media screen and (min-width: 700px) {
-        .gallery {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            place-items: center;
-        }
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        place-items: center;
     }
 
-  @media screen and (min-width: 700px) {
-        .gallery {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            place-items: center;
-        }
-  }
+    .main-menu {
+        flex-direction: row;
+        justify-content: center; 
+    }
+
+    .main-menu li {
+        margin: 0 10px;
+    }
+}
