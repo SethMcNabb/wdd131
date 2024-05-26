@@ -1,3 +1,4 @@
+/*menu button functionality*/
 const menuButton = document.querySelector(".menu-button");
 const mainMenu = document.querySelector(".main-menu");
 
@@ -5,6 +6,8 @@ menuButton.addEventListener("click", function() {
     mainMenu.classList.toggle("hide");
 });
 
+
+/*handle resize*/
 function handleResize() {
   const menu = document.querySelector(".menu");
   if (window.innerWidth > 1000) {
@@ -17,6 +20,8 @@ function handleResize() {
 handleResize();
 window.addEventListener("resize", handleResize);
 
+
+/*image viewer*/
 function viewerTemplate(pic, alt) {
   return `<div class="viewer">
     <button class="close-viewer">X</button>
