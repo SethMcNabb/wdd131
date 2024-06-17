@@ -43,7 +43,7 @@ main {
     margin: 0;
 }
 
-img {
+main img {
     max-width: 100%;
     width: 250px;
     height: 250px;
@@ -84,6 +84,7 @@ img {
     display: none;
 }
 
+/*viewer*/
 .viewer {
     position: fixed;
     top:0;
@@ -97,12 +98,12 @@ img {
     justify-items: center;
     align-items: center;
     color: grey;
+    padding: 50px;
 }
 
 .close-viewer {
     grid-row: 1;
     margin: 10px;
-    max-height: 10%;
     cursor: pointer;
     margin: 0;
 }
@@ -110,8 +111,8 @@ img {
 .viewer img {
     grid-row: 2;
     max-height: 100%;
-    width: auto;
-    object-fit: contain;
+    max-width: 80%;
+    object-fit: cover
 }
 
 /* Media Queries */
@@ -137,5 +138,8 @@ img {
         justify-content: center; 
         display: flex;
         gap: 20px;
+    }
+    .menu-button {
+        display: none;
     }
 }
