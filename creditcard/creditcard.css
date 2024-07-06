@@ -1,0 +1,68 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+form {
+    position: relative;
+    width: 300px;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    gap: 20px;
+}
+
+.card-front, .card-back {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: absolute;
+    width: 100%;
+}
+
+.card-back {
+    z-index: 1; /* Ensure the back is behind the front */
+    transform: rotateY(180deg); /* Optional: for a flip effect */
+    opacity: 0.7; /* Optional: make the back slightly transparent */
+}
+
+.card-front {
+    z-index: 2;
+}
+
+.card-image {
+    display: block;
+    margin: 0 auto 10px auto;
+    height: 55px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    position: relative;
+    grid-row: 3 / 4; /* Position button correctly in the grid */
+    z-index: 3; /* Ensure button is on top */
+}
+
+.button:hover {
+    background-color: #45a049;
+}
