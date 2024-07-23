@@ -3,9 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="A simple Budget Application">
+    <meta name="author" content="Seth McNabb">
+    <title>Simple Budget</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
 </head>
 <body>
-    
+    <header>
+        <div class="header-container">
+            <a class="logo" href="index.html">
+                <img src="images/logo.jpeg" alt="Simple Budget Logo Image" width="350" height="auto">
+            </a>
+        </div>
+        <nav class="navigation-container">
+            <ul class="navigation">
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="ExpenseForm.html">Expense Form</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="grid">
+            <div class="goals">
+                <h2>Goals</h2>
+                <h3>Did You Know?</h3>
+                <p>People who set specific financial goals save up to <span class="highlight">70%</span> more than those who don't.</p>
+                <input type="text" id="goalInput" placeholder="Enter your financial goal">
+                <button id="setGoal">Set Goal</button>
+                <p id="currentGoal"></p>
+            </div>
+            <div class="stock-image-container">
+                <img class="stock-image" src="images/money_stock_image_1.jpg" alt="Stock Image">
+                <button id="clearStorage">Clear Storage</button>
+            </div>
+            <div class="total-spent">
+                <h2>Total Spent</h2>
+            </div>
+            <div class="spending-by-category">
+                <h2>Spending By Category</h2>
+            </div>
+            <div class="recent-transactions">
+                <h2>Recent Transactions</h2>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+
+    <script src="scripts/simplebudget.js"></script>
 </body>
 </html>
